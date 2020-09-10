@@ -3,6 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,900&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
+
+}
+
+p {
+  margin: 0;
 }
 
 /*Sidebar*/
@@ -10,55 +15,113 @@ body {
   width: 32%;
   left: 0;
   top: 0;
+  right: 552px;
   bottom: 0;
   z-index: 1;
   height: 100%;
   position: fixed;
   background-color: white;
   padding: 3rem;
+
 }
-.name {
-  font-weight: 800;
-  font-size: 38px;
-}
+
+
 .introduction {
   margin: 0;
 }
-.full-name {
+
+.sidebar__name {
   text-transform: uppercase;
-  margin: 0;
   line-height: 1.1;
   font-weight: 800;
   width: 210px;
   font-size: 50px;
   background-color: whitesmoke;
   padding: 4px 9px;
+  margin-bottom: 20px;
+
 }
-.info {
+.text--subtitle {
   color: #5a6066;
   font-family: "Source Code Pro", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  margin: 0 0 20px;
+}
+.location {
+  background-color: yellow;
+  font-style: italic;
+  padding: 1px;
+}
+.icons {
+  margin-top: 20px;
 }
 .sidebar-content {
   display: flex;
+  margin-top: 20%;
   align-items: center;
+  justify-content: center;
 }
 
 /*Main*/
-.main {
-  background-color: #aaffa7;
-  overflow: auto;
-  height: 500px;
+.main-container {
+  height: 100vh;
+  position: relative;
+  max-width: 1200px;
+  margin-left: 40%;
+  width: 60%;
+
 }
-.main-2 {
-  height: 400px;
-  background-color: lightskyblue;
+.box {
+  overflow: auto;
+  height: 50vh;
+
+
+}
+.box--title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.box__content__container {
+  height: 100%;
+}
+.box--content {
+  margin: 1rem;
+  height: 100%;
 }
 
-.projects {
+.box__header {
+  display: flex;
+}
+
+.box__emoji {
+  margin-left: 10px;
+}
+
+.box--green {
+
+  background: linear-gradient(90deg, #02FEFE 21px, transparent 1%) center, linear-gradient(#02FEFE 21px, transparent 1%) center, white;
+  background-size: 23px 23px;
+}
+
+
+.box--blue {
+  background-color: #AAFFA7;
+}
+.green--pattern {
+  background: linear-gradient(90deg, #AAFFA7 21px, transparent 1%) center, linear-gradient(#AAFFA7 21px, transparent 1%) center, white;
+  background-size: 23px 23px;
+}
+
+.coral--pattern {
+  background: linear-gradient(90deg, lightcoral 21px, transparent 1%) center, linear-gradient(lightcoral 21px, transparent 1%) center, white;
+  background-size: 23px 23px;
+}
+
+.box__projects {
   width: 100% !important;
-  z-index: 4;
+  z-index: 5;
   height: 500px;
   background-color: lightcoral;
   position: relative;
@@ -68,3 +131,38 @@ body {
   background-color: hotpink;
   height: 100vh;
 }
+/*Timeline*/
+.timeline {
+  width: 100%;
+  position: relative;
+}
+.timeline:before {
+  content: "";
+  width: 3px;
+  background-color: black;
+  left: 50%;
+  transform: translateX(50%);
+  top: 0;
+  position: absolute;
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+  text-align: right;
+}
+
+.timeline-icon {
+  background: black;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  margin-left: -10px;
+  border-radius: 50%;
+}
+
+
+
