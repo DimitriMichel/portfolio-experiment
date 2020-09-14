@@ -24,7 +24,7 @@ const imageVariants = {
   show: {
     y: 0,
     opacity: [0, 1, 1, 1, 1, 1, 1, 1],
-    transition: { delay: 0.4, duration: 1.2 },
+    transition: { delay: 0.5, duration: 1 },
   },
 };
 const Sidebar = () => {
@@ -32,14 +32,15 @@ const Sidebar = () => {
     <div className="sidebar_container">
       <div className="sidebar">
         <div className="sidebar__content">
-          <motion.img
-            variants={imageVariants}
-            initial="hidden"
-            animate="show"
-            className="sidebar__image"
-            src={emojiImage}
-          />
-
+          <div className="sidebar__image__container">
+            <motion.img
+              variants={imageVariants}
+              initial="hidden"
+              animate="show"
+              className="sidebar__image"
+              src={emojiImage}
+            />
+          </div>
           <motion.div
             variants={nameBackgroundVariants}
             initial="hidden"

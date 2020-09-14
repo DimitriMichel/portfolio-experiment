@@ -1,9 +1,10 @@
 import React, { useState, Fragment } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-//{!status.submitting ? !status.submitted ? "Submit" : "Submitted" : "Submitting..."}
-//{!status.info.error ? "Submitted": "Error"}
+import useSound from "use-sound";
+import whooshSfx from "../sounds/woosh.mp3";
 
+//Animation Config
 const checkMarkVariants = {
   initial: { y: 20, opacity: 0 },
   animate: {
@@ -14,6 +15,7 @@ const checkMarkVariants = {
     },
   },
 };
+//Sound Effect
 
 const ContactForm = () => {
   const [status, setStatus] = useState({
@@ -21,6 +23,7 @@ const ContactForm = () => {
     submitting: false,
     info: { error: false, msg: null },
   });
+
   const [inputs, setInputs] = useState({
     email: "",
     message: "",
@@ -40,6 +43,12 @@ const ContactForm = () => {
       setStatus({
         info: { error: true, msg: msg },
       });
+    }
+  };
+  const [play] = useSound(whooshSfx);
+  const playMailSfx = () => {
+    if (status.submitted) {
+      play();
     }
   };
   const handleOnChange = (e) => {
@@ -70,68 +79,71 @@ const ContactForm = () => {
       });
   };
   return (
-    <Fragment>
-      <form onSubmit={handleOnSubmit} className="form">
-        <div className="contact__header">
-          <motion.div className="box--title">Contact</motion.div>
-          <motion.div
-            initial="static"
-            animate="floating"
-            transition="transition"
-            className="box--title box__emoji"
-          >
-            ✉️
-          </motion.div>
-          {status.submitted ? (
+    <div className="contact pink--pattern">
+      <div className="form__container">
+        <form onSubmit={handleOnSubmit} className="form">
+          <div className="contact__header">
+            <motion.div className="box--title">Contact</motion.div>
             <motion.div
-              initial="initial"
-              animate="animate"
+              initial="static"
+              animate="floating"
               transition="transition"
-              variants={checkMarkVariants}
               className="box--title box__emoji"
             >
-              👍
+              ✉️
             </motion.div>
-          ) : (
-            <div></div>
-          )}
-        </div>
-        <label className="email__label" htmlFor="email">
-          Email
-        </label>
-        <input
-          className="form__input"
-          id="email"
-          type="email"
-          name="_replyto"
-          onChange={handleOnChange}
-          required
-          value={inputs.email}
-        />
-        <label htmlFor="message">Message</label>
-        <textarea
-          className="form__textarea"
-          id="message"
-          name="message"
-          onChange={handleOnChange}
-          required
-          value={inputs.message}
-        />
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.99 }}
-          type="submit"
-          disabled={status.submitting}
-          className="form__submit__button"
-        >
-          {!status.submitting
-            ? !status.submitted
-              ? "Submit"
-              : "Submitted"
-            : "Submitting..."}
-        </motion.button>
-      </form>
-    </Fragment>
+            {status.submitted ? (
+              <motion.div
+                initial="initial"
+                animate="animate"
+                transition="transition"
+                variants={checkMarkVariants}
+                className="box--title box__emoji"
+              >
+                👍
+              </motion.div>
+            ) : (
+              <div></div>
+            )}
+          </div>
+          <label className="email__label" htmlFor="email">
+            Email
+          </label>
+          <input
+            className="form__input"
+            id="email"
+            type="email"
+            name="_replyto"
+            onChange={handleOnChange}
+            required
+            value={inputs.email}
+          />
+          <label htmlFor="message">Message</label>
+          <textarea
+            className="form__textarea"
+            id="message"
+            name="message"
+            onChange={handleOnChange}
+            required
+            value={inputs.message}
+          />
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.99 }}
+            type="submit"
+            onClick={play}
+            disabled={status.submitting}
+            className="form__submit__button"
+          >
+            {!status.submitting
+              ? !status.submitted
+                ? "Submit"
+                : "Submitted"
+              : "Submitting..."}
+          </motion.button>
+        </form>
+      </div>
+    </div>
   );
 };
 

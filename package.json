@@ -8,12 +8,14 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.20.0",
     "framer-motion": "^2.6.10",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "react-intersection-observer": "^8.28.4",
     "react-scripts": "3.4.3",
-    "react-tooltip": "^4.2.9"
+    "react-tooltip": "^4.2.9",
+    "use-sound": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
