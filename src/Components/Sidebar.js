@@ -24,7 +24,7 @@ const imageVariants = {
   show: {
     y: 0,
     opacity: [0, 1, 1, 1, 1, 1, 1, 1],
-    transition: { delay: 0.5, duration: 1 },
+    transition: { delay: 0.8, duration: 1 },
   },
 };
 const Sidebar = () => {
