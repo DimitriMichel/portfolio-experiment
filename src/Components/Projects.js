@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import tideVideo from "../images/tide.mp4";
-import plutoVideo from "../images/pluto.mp4";
-import bakeryVideo from "../images/bakery.mp4";
+import tideGif from "../images/tide.gif";
+import plutoGif from "../images/pluto.gif";
+import bakeryGif from "../images/bakery.gif";
 import Project from "./Project";
 //Animation Config
 const opacityAnimation = {
@@ -57,9 +57,9 @@ const Projects = () => {
           </div>
 
           <motion.div animate={{ opacity: 1 }} className="project__content">
-            <Project videoSource={tideVideo} projectInfo={tideInfo} />
-            <Project videoSource={plutoVideo} projectInfo={plutoInfo} />
-            <Project videoSource={bakeryVideo} projectInfo={bakerInfo} />
+            <Project imageSource={tideGif}  projectInfo={tideInfo} />
+            <Project imageSource={plutoGif} projectInfo={plutoInfo} />
+            <Project imageSource={bakeryGif} projectInfo={bakerInfo} />
           </motion.div>
         </div>
       </div>
