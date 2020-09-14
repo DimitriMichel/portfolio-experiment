@@ -57,7 +57,7 @@ const Projects = () => {
           </div>
 
           <motion.div animate={{ opacity: 1 }} className="project__content">
-            <Project imageSource={tideGif}  projectInfo={tideInfo} />
+            <Project imageSource={tideGif} projectInfo={tideInfo} />
             <Project imageSource={plutoGif} projectInfo={plutoInfo} />
             <Project imageSource={bakeryGif} projectInfo={bakerInfo} />
           </motion.div>
