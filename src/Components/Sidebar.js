@@ -72,7 +72,9 @@ const Sidebar = () => {
           >
             <motion.ul className="sidebar__name">
               <motion.li variants={nameVariants}>Dimitri</motion.li>
-              <motion.li variants={nameVariants}>Michel</motion.li>{" "}
+              <motion.li variants={nameVariants}>Pierre</motion.li>
+              <motion.li variants={nameVariants}>Louis</motion.li>
+
 
             </motion.ul>
             <motion.div variants={nameVariants} className="info text--subtitle">
