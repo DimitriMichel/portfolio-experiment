@@ -1,7 +1,7 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 
-const Project = ({ imageSource, projectInfo }) => {
+const Project = ({ imageSource, projectInfo, alt }) => {
   return (
     <div className="project-container">
       <div className="project">
@@ -10,7 +10,7 @@ const Project = ({ imageSource, projectInfo }) => {
           height="auto"
           width="100%"
           src={imageSource}
-          alt="Portfolio Project"
+          alt={alt}
         />
 
         <div className="project__info text--subtitle">{projectInfo}</div>
@@ -25,6 +25,7 @@ const Project = ({ imageSource, projectInfo }) => {
 
 Project.propTypes = {
   projectInfo: PropTypes.string,
+  alt: PropTypes.string
 };
 
 export default Project;

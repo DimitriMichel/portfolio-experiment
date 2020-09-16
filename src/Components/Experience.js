@@ -29,7 +29,7 @@ const Experience = () => {
               transition="transition"
               className="box--title box__emoji"
             >
-              ⏳
+                <span role="img" aria-label="Hourglass Emoji">⏳</span>
             </motion.div>
           </div>
           <div className="timeline__container ">

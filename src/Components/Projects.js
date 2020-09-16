@@ -25,7 +25,7 @@ const bakerInfo = "A static site for a local bakery";
 
 const Projects = () => {
   //Play Animation Once In Viewport
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     triggerOnce: true,
 
     threshold: 0,
@@ -49,7 +49,9 @@ const Projects = () => {
                 transition="transition"
                 className="box--title box__emoji"
               >
-                👷🏾‍♂️
+                <span role="img" aria-label="Construction Worker Emoji">
+                  👷🏾‍♂️
+                </span>
               </motion.div>
             ) : (
               <div></div>
@@ -57,9 +59,21 @@ const Projects = () => {
           </div>
           {inView ? (
             <motion.div animate={{ opacity: 1 }} className="project__content">
-              <Project imageSource={tideGif} projectInfo={tideInfo} />
-              <Project imageSource={plutoGif} projectInfo={plutoInfo} />
-              <Project imageSource={bakeryGif} projectInfo={bakerInfo} />
+              <Project
+                imageSource={tideGif}
+                alt="social media site"
+                projectInfo={tideInfo}
+              />
+              <Project
+                imageSource={plutoGif}
+                alt="data visualization"
+                projectInfo={plutoInfo}
+              />
+              <Project
+                imageSource={bakeryGif}
+                alt="bakery static site"
+                projectInfo={bakerInfo}
+              />
             </motion.div>
           ) : (
             <div></div>

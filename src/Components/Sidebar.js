@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import emojiImage from "../images/animoji.png";
 import downArrow from "../images/down_arrow.svg";
@@ -61,6 +61,7 @@ const Sidebar = () => {
               initial="hidden"
               animate="show"
               className="sidebar__image"
+              alt='profile emoji'
               src={emojiImage}
             />
           </div>
@@ -85,7 +86,7 @@ const Sidebar = () => {
                 variants={yLandingAnimation}
                 className='pin'
               >
-                📍
+                <span role='img' aria-label='Location Pin Emoji'>📍</span>
               </motion.div>{"  "}
               <div className="location">Boston, MA</div>
             </motion.div>

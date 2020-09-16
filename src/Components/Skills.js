@@ -35,7 +35,7 @@ const Skills = () => {
             transition="transition"
             className="box--title box__emoji"
           >
-            🔨
+            <span role="img" aria-label="Hammer Emoji"> 🔨</span>
           </motion.div>
         </div>
         <div className="logos__container">

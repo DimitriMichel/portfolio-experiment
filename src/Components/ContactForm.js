@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import useSound from "use-sound";
@@ -46,11 +46,6 @@ const ContactForm = () => {
     }
   };
   const [play] = useSound(whooshSfx);
-  const playMailSfx = () => {
-    if (status.submitted) {
-      play();
-    }
-  };
   const handleOnChange = (e) => {
     e.persist();
     setInputs((prev) => ({
@@ -90,7 +85,9 @@ const ContactForm = () => {
               transition="transition"
               className="box--title box__emoji"
             >
-              ✉️
+              <span role="img" aria-label="Envelope Emoji">
+                ✉️
+              </span>
             </motion.div>
             {status.submitted ? (
               <motion.div
@@ -100,7 +97,7 @@ const ContactForm = () => {
                 variants={checkMarkVariants}
                 className="box--title box__emoji"
               >
-                👍
+                <span role="img" aria-label="Thumbs Up Emoji">👍</span>
               </motion.div>
             ) : (
               <div></div>
