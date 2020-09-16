@@ -27,7 +27,7 @@ const Projects = () => {
   //Play Animation Once In Viewport
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
-    rootMargin: "10px",
+
     threshold: 0,
   });
   return (
@@ -55,12 +55,15 @@ const Projects = () => {
               <div></div>
             )}
           </div>
-
-          <motion.div animate={{ opacity: 1 }} className="project__content">
-            <Project imageSource={tideGif} projectInfo={tideInfo} />
-            <Project imageSource={plutoGif} projectInfo={plutoInfo} />
-            <Project imageSource={bakeryGif} projectInfo={bakerInfo} />
-          </motion.div>
+          {inView ? (
+            <motion.div animate={{ opacity: 1 }} className="project__content">
+              <Project imageSource={tideGif} projectInfo={tideInfo} />
+              <Project imageSource={plutoGif} projectInfo={plutoInfo} />
+              <Project imageSource={bakeryGif} projectInfo={bakerInfo} />
+            </motion.div>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     </div>
