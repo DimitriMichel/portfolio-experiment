@@ -83,7 +83,7 @@ const ContactForm = () => {
       <div className="form__container">
         <form onSubmit={handleOnSubmit} className="form">
           <div className="contact__header">
-            <motion.div className="box--title">Contact</motion.div>
+            <motion.div className="box--title--contact">Contact</motion.div>
             <motion.div
               initial="static"
               animate="floating"

@@ -21,6 +21,7 @@ input {
 }
 label {
   margin-bottom: 0.5rem;
+  font-size: 1.3rem;
 }
 textarea {
   background-color: #e8ebef;
@@ -75,12 +76,20 @@ textarea {
   font-family: "Source Code Pro", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 20px 0;
 }
 .location {
   background-color: yellow;
   font-style: italic;
-  padding: 1px;
+  max-height: 20px;
+}
+.info{
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+.pin {
+  margin: 0 5px;
 }
 
 .sidebar__content {
@@ -143,6 +152,11 @@ textarea {
   height: 50vh;
 }
 .box--title {
+   font-weight: 800;
+   text-transform: uppercase;
+   font-size: 3rem;
+ }
+.box--title--contact {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 3rem;
@@ -344,7 +358,7 @@ textarea {
   margin-left: 40%;
   width: 60%;
   position: relative;
-  max-width: 1200px;
+
 }
 
 .email__label {
@@ -355,7 +369,10 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 545px;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin: 0 4rem;
 }
 .form__container {
   display: flex;
@@ -384,6 +401,13 @@ textarea {
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .contact{
+    width: initial;
+    max-width: none;
+  }
+
+}
 @media only screen and (max-width: 767px) {
   .main-container {
     max-width: 100vw;
@@ -446,18 +470,16 @@ textarea {
     justify-content: center;
   }
   label {
-    padding: 10px;
-    margin-left: 40px;
+
   }
   input {
-    margin: 0 40px;
+
   }
   textarea {
-    margin-left: 40px;
-    margin-right: 40px;
+
   }
   .form__submit__button {
-    margin-left: 40px;
+max-width: initial;
   }
 }
 
@@ -479,9 +501,7 @@ textarea {
     margin-top: 100px;
   }
 
-  .form {
-    width: initial;
-  }
+
 }
 @media only screen and (min-width: 768px) {
   .sidebar__content{
@@ -498,17 +518,13 @@ textarea {
   .box__projects {
     height: initial;
   }
-  .form{
-    width: initial;
-  }
+
   .form__submit__button {
     font-size: 1.3rem;
     padding: 10px;
     max-width: initial;
   }
-  .contact {
-    margin-left: 43%;
-  }
+
 }
 @media only screen and (max-width: 375px) {
   .project {

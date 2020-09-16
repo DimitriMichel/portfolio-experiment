@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import emojiImage from "../images/animoji.png";
 import downArrow from "../images/down_arrow.svg";
 
-
 //Animation Variants
 const nameBackgroundVariants = {
   hidden: { y: 50, opacity: 0 },
@@ -29,7 +28,7 @@ const imageVariants = {
     transition: { delay: 0.8, duration: 1 },
   },
 };
-export const yBouncingAnimation = {
+const yBouncingAnimation = {
   static: { y: 0 },
   floating: {
     y: [0, -17],
@@ -37,6 +36,17 @@ export const yBouncingAnimation = {
       duration: 0.6,
       ease: "easeOut",
       yoyo: Infinity,
+    },
+  },
+};
+const yLandingAnimation = {
+  hidden: { y: -17, opacity: 0 },
+  show: {
+    y: -2,
+    opacity: 1,
+    transition: {
+      delay:1.9,
+      duration: 0.6,
     },
   },
 };
@@ -65,11 +75,20 @@ const Sidebar = () => {
               <motion.li variants={nameVariants}>Pierre</motion.li>{" "}
               <motion.li variants={nameVariants}>Louis</motion.li>
             </motion.ul>
-            <motion.p variants={nameVariants} className="info text--subtitle">
-              Software Developer 📍 <span className="location">Boston, MA</span>
-            </motion.p>
+            <motion.div variants={nameVariants} className="info text--subtitle">
+              Software Developer{"  "}
+              <motion.div
+                initial="hidden"
+                animate="show"
+                variants={yLandingAnimation}
+                className='pin'
+              >
+                📍
+              </motion.div>{"  "}
+              <div className="location">Boston, MA</div>
+            </motion.div>
             <motion.p variants={nameVariants}>
-              <span className="sidebar__links text--subtitle">Github</span>
+              <span className="sidebar__links text--subtitle"><a href='https://github.com/DimitriMichel'>Github</a></span>
               <span className="sidebar__links text--subtitle">e-Mail</span>
               <span className="sidebar__links text--subtitle"></span>
             </motion.p>
