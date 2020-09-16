@@ -96,6 +96,12 @@ textarea {
   text-decoration-style: solid;
   margin: 0 5px;
 }
+.down-arrow {
+  display: none;
+  padding-top: 80px;
+  height: 30px;
+  width: 30px;
+}
 /*Main*/
 .main-container {
   height: 100vh;
@@ -118,17 +124,18 @@ textarea {
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
+
 }
 .logos {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
+
 }
 .skills__logo {
   width: 60px;
   height: 60px;
-  margin-left: 20px;
-  margin-top: 20px;
+  padding: 20px;
 }
 .box {
   padding: 5px;
@@ -137,7 +144,6 @@ textarea {
 }
 .box--title {
   font-weight: 800;
-
   text-transform: uppercase;
   font-size: 3rem;
 }
@@ -420,6 +426,9 @@ textarea {
     z-index: 400;
     position: relative;
   }
+  .down-arrow {
+    display: initial;
+  }
   .--item-two {
     margin-top: 80px;
   }
@@ -449,5 +458,119 @@ textarea {
   }
   .form__submit__button {
     margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .sidebar__content {
+    height: 80vh;
+  }
+  .skills__experience__container {
+    margin-left: 44%;
+    width: initial;
+  }
+  .box--title {
+    margin-left: 10px;
+  }
+  .box__projects {
+    height: initial;
+  }
+  .--item-two {
+    margin-top: 100px;
+  }
+
+  .form {
+    width: initial;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .sidebar__content{
+    height: 90vh;
+    margin: 0;
+  }
+  .skills__experience__container {
+    width: initial;
+    margin-left: 44%;
+  }
+  .box--title{
+    margin-left: 10px;
+  }
+  .box__projects {
+    height: initial;
+  }
+  .form{
+    width: initial;
+  }
+  .form__submit__button {
+    font-size: 1.3rem;
+    padding: 10px;
+    max-width: initial;
+  }
+  .contact {
+    margin-left: 43%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .project {
+    margin: 20px 0;
+  }
+  .skills__logo {
+    padding: 10px;
+  }
+  .box--title {
+    font-size: 2.5rem;
+  }
+  .--item-two {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 341px) {
+  .project {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  .skills__logo {
+    padding: 10px;
+  }
+  .box--title {
+    font-size: 2.5rem;
+  }
+  .--item-two {
+    margin-top: 10px;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 360px) {
+  .box__emoji {
+    display: none;
+  }
+  .--item-two {
+    margin-top: 0;
+  }
+  .--date {
+    padding: 5px;
+  }
+  .project {
+    margin: 20px 0;
+  }
+  .form__submit__button {
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: initial;
+  }
+
+  /*lol..*/
+  @media only screen and (max-width: 360px) {
+    .skills__logo {
+      width: 50px;
+      height: 50px;
+    }
+    .logos__container {
+      margin-top: 20px;
+    }
   }
 }

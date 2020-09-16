@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
 import { motion } from "framer-motion";
 import emojiImage from "../images/animoji.png";
+import downArrow from "../images/down_arrow.svg";
+
 
 //Animation Variants
 const nameBackgroundVariants = {
@@ -25,6 +27,17 @@ const imageVariants = {
     y: 0,
     opacity: [0, 1, 1, 1, 1, 1, 1, 1],
     transition: { delay: 0.8, duration: 1 },
+  },
+};
+export const yBouncingAnimation = {
+  static: { y: 0 },
+  floating: {
+    y: [0, -17],
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      yoyo: Infinity,
+    },
   },
 };
 const Sidebar = () => {
@@ -61,8 +74,14 @@ const Sidebar = () => {
               <span className="sidebar__links text--subtitle"></span>
             </motion.p>
           </motion.div>
-
-          <br />
+          <motion.img
+            initial="static"
+            animate="floating"
+            transition="transition"
+            className="down-arrow"
+            variants={yBouncingAnimation}
+            src={downArrow}
+          />
         </div>
       </div>
     </div>
