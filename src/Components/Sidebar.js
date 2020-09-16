@@ -62,6 +62,8 @@ const Sidebar = () => {
               animate="show"
               className="sidebar__image"
               alt='profile emoji'
+              height='160'
+              width='136'
               src={emojiImage}
             />
           </div>
@@ -101,6 +103,7 @@ const Sidebar = () => {
             animate="floating"
             transition="transition"
             className="down-arrow"
+            alt='Arrow Pointing Down'
             variants={yBouncingAnimation}
             src={downArrow}
           />

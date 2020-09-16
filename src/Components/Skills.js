@@ -43,6 +43,7 @@ const Skills = () => {
             <motion.img
               whileHover={{ scale: 1.2 }}
               data-tip="React"
+              alt='React Logo'
               className="skills__logo"
               src={reactLogo}
             />
@@ -50,6 +51,7 @@ const Skills = () => {
             <motion.img
               whileHover={{ scale: 1.2 }}
               data-tip="Javascript"
+              alt='Javascript Logo'
               className="skills__logo"
               src={javascriptLogo}
             />
@@ -57,6 +59,7 @@ const Skills = () => {
             <motion.img
               whileHover={{ scale: 1.2 }}
               data-tip="NextJS"
+              alt='Next JS Logo'
               className="skills__logo"
               src={nextLogo}
             />
@@ -64,6 +67,7 @@ const Skills = () => {
             <motion.img
               whileHover={{ scale: 1.2 }}
               data-tip="Firebase"
+              alt='Firebase Logo'
               className="skills__logo"
               src={firebaseLogo}
             />
@@ -71,6 +75,7 @@ const Skills = () => {
             <motion.img
               whileHover={{ scale: 1.2 }}
               data-tip="Jest"
+              alt='Jest Logo'
               className="skills__logo"
               src={jestLogo}
             />
@@ -78,6 +83,7 @@ const Skills = () => {
             <motion.img
               whileHover={{ scale: 1.2 }}
               data-tip="Sass"
+              alt='Sass Logo'
               className="skills__logo"
               src={sassLogo}
             />
@@ -85,6 +91,7 @@ const Skills = () => {
             <motion.img
               whileHover={{ scale: 1.2 }}
               data-tip="Node"
+              alt='Node Logo'
               className="skills__logo"
               src={nodeLogo}
             />
