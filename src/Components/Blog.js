@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import tideGif from "../images/tide.gif";
-import plutoGif from "../images/pluto.gif";
-import bakeryGif from "../images/bakery.gif";
-import Project from "./Project";
+import moneyPNG from "../images/money.png";
+import booksPNG from "../images/books.png";
+import brainPNG from "../images/brain.png";
+import BlogPost from "./BlogPost";
 //Animation Config
 const opacityAnimation = {
   static: { opacity: 0, y: 10 },
@@ -18,12 +18,7 @@ const opacityAnimation = {
   },
 };
 
-//Project Info Text
-const tideInfo = "A small social media application.";
-const plutoInfo = "Finances of all members of congress";
-const bakerInfo = "A static site for a local bakery";
-
-const Projects = () => {
+const Blog = () => {
   //Play Animation Once In Viewport
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -50,7 +45,7 @@ const Projects = () => {
                 className="box--title box__emoji"
               >
                 <span role="img" aria-label="Construction Worker Emoji">
-                  👷🏾‍♂️
+                  ✍️♂️
                 </span>
               </motion.div>
             ) : (
@@ -59,26 +54,11 @@ const Projects = () => {
           </div>
           {inView ? (
             <motion.div animate={{ opacity: 1 }} className="project__content">
-              <Project
-                imageSource={tideGif}
-                alt="social media site"
-                projectInfo={tideInfo}
-                launchFrom={"https://tide.dimitrimichel.com/login"}
-                github={"https://github.com/DimitriMichel/Tide"}
-              />
-              <Project
-                imageSource={plutoGif}
-                alt="data visualization"
-                projectInfo={plutoInfo}
-                launchFrom={"https://pluto.dimitriMichel.com"}
-                github={"https://github.com/DimitriMichel/Pluto"}
-              />
-              <Project
-                imageSource={bakeryGif}
-                alt="bakery static site"
-                projectInfo={bakerInfo}
-                launchFrom={"https://bakery.dimitriMichel.com"}
-                github={"https://github.com/DimitriMichel/Bakery"}
+              <BlogPost
+                imageSource={brainPNG}
+                alt="sculpture of human head"
+                blogLink="www.google.com"
+                blogTitle='How I Stopped Worrying'
               />
             </motion.div>
           ) : (

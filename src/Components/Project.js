@@ -1,7 +1,7 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 
-const Project = ({ imageSource, projectInfo, alt }) => {
+const Project = ({ imageSource, projectInfo, alt, launchFrom, github }) => {
   return (
     <div className="project-container">
       <div className="project">
@@ -15,8 +15,12 @@ const Project = ({ imageSource, projectInfo, alt }) => {
 
         <div className="project__info text--subtitle">{projectInfo}</div>
         <div className="project__buttons">
-          <button className="project__button">Launch</button>
-          <button className="project__button">Code</button>
+          <a href={launchFrom}>
+            <button className="project__button">Launch</button>
+          </a>
+          <a href={github}>
+            <button className="project__button">Code</button>
+          </a>
         </div>
       </div>
     </div>
@@ -25,7 +29,7 @@ const Project = ({ imageSource, projectInfo, alt }) => {
 
 Project.propTypes = {
   projectInfo: PropTypes.string,
-  alt: PropTypes.string
+  alt: PropTypes.string,
 };
 
 export default Project;

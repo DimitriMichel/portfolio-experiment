@@ -23,7 +23,7 @@ const nameVariants = {
 const imageVariants = {
   hidden: { y: 170 },
   show: {
-    y: 0,
+    y: 4,
     opacity: [0, 1, 1, 1, 1, 1, 1, 1],
     transition: { delay: 0.8, duration: 1 },
   },
@@ -45,7 +45,7 @@ const yLandingAnimation = {
     y: -2,
     opacity: 1,
     transition: {
-      delay:1.9,
+      delay: 1.9,
       duration: 0.6,
     },
   },
@@ -55,18 +55,24 @@ const Sidebar = () => {
     <div className="sidebar_container">
       <div className="sidebar">
         <div className="sidebar__content">
-          <div className="sidebar__image__container">
+          <motion.div
+            whileHover={{
+              y: 70,
+            }}
+            transition={{  y: { type: "tween"},}}
+            className="sidebar__image__container"
+          >
             <motion.img
               variants={imageVariants}
               initial="hidden"
               animate="show"
               className="sidebar__image"
-              alt='profile emoji'
-              height='160'
-              width='136'
+              alt="profile emoji"
+              height="160"
+              width="136"
               src={emojiImage}
             />
-          </div>
+          </motion.div>
           <motion.div
             variants={nameBackgroundVariants}
             initial="hidden"
@@ -77,8 +83,6 @@ const Sidebar = () => {
               <motion.li variants={nameVariants}>Dimitri</motion.li>
               <motion.li variants={nameVariants}>Pierre</motion.li>
               <motion.li variants={nameVariants}>Louis</motion.li>
-
-
             </motion.ul>
             <motion.div variants={nameVariants} className="info text--subtitle">
               Software Developer{"  "}
@@ -86,15 +90,20 @@ const Sidebar = () => {
                 initial="hidden"
                 animate="show"
                 variants={yLandingAnimation}
-                className='pin'
+                className="pin"
               >
-                <span role='img' aria-label='Location Pin Emoji'>📍</span>
-              </motion.div>{"  "}
+                <span role="img" aria-label="Location Pin Emoji">
+                  📍
+                </span>
+              </motion.div>
+              {"  "}
               <div className="location">Boston, MA</div>
             </motion.div>
             <motion.p variants={nameVariants}>
-              <span className="sidebar__links text--subtitle"><a href='https://github.com/DimitriMichel'>Github</a></span>
-              <span className="sidebar__links text--subtitle">e-Mail</span>
+              <span className="sidebar__links text--subtitle">
+                <a href="https://github.com/DimitriMichel">Github</a>
+              </span>
+              <span className="sidebar__links text--subtitle"><a href="mailto:dimitri.dev@icloud.com">e-Mail</a></span>
               <span className="sidebar__links text--subtitle"></span>
             </motion.p>
           </motion.div>
@@ -103,7 +112,7 @@ const Sidebar = () => {
             animate="floating"
             transition="transition"
             className="down-arrow"
-            alt='Arrow Pointing Down'
+            alt="Arrow Pointing Down"
             variants={yBouncingAnimation}
             src={downArrow}
           />
