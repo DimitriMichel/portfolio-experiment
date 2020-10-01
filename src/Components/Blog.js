@@ -5,6 +5,7 @@ import moneyPNG from "../images/money.png";
 import booksPNG from "../images/books.png";
 import brainPNG from "../images/brain.png";
 import BlogPost from "./BlogPost";
+import LazyLoad from "react-lazyload";
 //Animation Config
 const opacityAnimation = {
   static: { opacity: 0, y: 10 },
@@ -22,37 +23,37 @@ const Blog = () => {
   //Play Animation Once In Viewport
   const { ref, inView } = useInView({
     triggerOnce: true,
-
     threshold: 0,
   });
   return (
-    <div className="box--blue box__projects">
-      <div
-        className="box__content__container
+    <LazyLoad height={280}>
+      <div className="box--blue box__projects">
+        <div
+          className="box__content__container
       black--pattern "
-      >
-        <div className="projects__content ">
-          <div className="box__header">
-            <motion.div ref={ref} className="box--title">
-              Blog
-            </motion.div>
-            {inView ? (
+        >
+          <div className="projects__content ">
+            <div className="box__header">
+              <motion.div className="box--title">Blog</motion.div>
+
               <motion.div
                 variants={opacityAnimation}
                 initial="static"
                 animate="visible"
                 transition="transition"
                 className="box--title box__emoji"
+                ref={ref}
               >
-                <span role="img" aria-label="Construction Worker Emoji">
-                  ✍️
-                </span>
+                {inView ? (
+                  <span role="img" aria-label="Construction Worker Emoji">
+                    ✍️
+                  </span>
+                ) : (
+                  <div></div>
+                )}
               </motion.div>
-            ) : (
-              <div></div>
-            )}
-          </div>
-          {inView ? (
+            </div>
+
             <motion.div animate={{ opacity: 1 }} className="project__content">
               <BlogPost
                 imageSource={brainPNG}
@@ -73,12 +74,10 @@ const Blog = () => {
                 blogTitle="React 101: Required Materials"
               />
             </motion.div>
-          ) : (
-            <div></div>
-          )}
+          </div>
         </div>
       </div>
-    </div>
+    </LazyLoad>
   );
 };
 

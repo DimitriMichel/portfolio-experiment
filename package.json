@@ -13,6 +13,7 @@
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
     "react-intersection-observer": "^8.28.4",
+    "react-lazyload": "^3.0.0",
     "react-scripts": "3.4.3",
     "react-tooltip": "^4.2.9",
     "use-sound": "^1.0.2"

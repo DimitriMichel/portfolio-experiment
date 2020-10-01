@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import tideGif from "../images/tide.gif";
+import LazyLoad from "react-lazyload";
 import plutoGif from "../images/pluto.gif";
 import bakeryGif from "../images/bakery.gif";
 import Project from "./Project";
+import { useInView } from "react-intersection-observer";
 //Animation Config
 const opacityAnimation = {
   static: { opacity: 0, y: 10 },
@@ -26,38 +27,38 @@ const bakerInfo = "A static site for a local bakery";
 const Projects = () => {
   //Play Animation Once In Viewport
   const { ref, inView } = useInView({
-    triggerOnce: true,
-
-    threshold: 0,
+    triggerOnce: false,
+    threshold: -100,
   });
   return (
-    <div className="box--blue box__projects">
-      <div
-        className="box__content__container
+    <LazyLoad height={350}>
+      <div className="box--blue box__projects">
+        <div
+          className="box__content__container
       yellow--pattern "
-      >
-        <div className="projects__content ">
-          <div className="box__header">
-            <motion.div ref={ref} className="box--title">
-              Projects
-            </motion.div>
-            {inView ? (
+        >
+          <div className="projects__content">
+            <div className="box__header">
+              <motion.div className="box--title">Projects</motion.div>
+
               <motion.div
                 variants={opacityAnimation}
                 initial="static"
                 animate="visible"
                 transition="transition"
                 className="box--title box__emoji"
+                ref={ref}
               >
-                <span role="img" aria-label="Construction Worker Emoji">
-                  👷🏾‍♂️
-                </span>
+                {inView ? (
+                  <span role="img" aria-label="Construction Worker Emoji">
+                    👷🏾‍♂️
+                  </span>
+                ) : (
+                  <div></div>
+                )}
               </motion.div>
-            ) : (
-              <div></div>
-            )}
-          </div>
-          {inView ? (
+            </div>
+
             <motion.div animate={{ opacity: 1 }} className="project__content">
               <Project
                 imageSource={tideGif}
@@ -66,6 +67,7 @@ const Projects = () => {
                 launchFrom={"https://tide.dimitrimichel.com/login"}
                 github={"https://github.com/DimitriMichel/Tide"}
               />
+
               <Project
                 imageSource={plutoGif}
                 alt="data visualization"
@@ -73,6 +75,7 @@ const Projects = () => {
                 launchFrom={"https://pluto.dimitriMichel.com"}
                 github={"https://github.com/DimitriMichel/Pluto"}
               />
+
               <Project
                 imageSource={bakeryGif}
                 alt="bakery static site"
@@ -81,12 +84,10 @@ const Projects = () => {
                 github={"https://github.com/DimitriMichel/Bakery"}
               />
             </motion.div>
-          ) : (
-            <div></div>
-          )}
+          </div>
         </div>
       </div>
-    </div>
+    </LazyLoad>
   );
 };
 
