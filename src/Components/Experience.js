@@ -6,6 +6,7 @@ const rotatingAnimation = {
     static: { y: 0 },
     rotating: {
         rotate: [0, 0, 360, 360, 0, 0],
+
         transition: {
             duration: 7,
             ease: "easeInOut",
@@ -28,6 +29,7 @@ const Experience = () => {
               animate="rotating"
               transition="transition"
               className="box--title box__emoji"
+              style={{ originY: 0.3 }}
             >
                 <span role="img" aria-label="Hourglass Emoji">⏳</span>
             </motion.div>

@@ -244,7 +244,7 @@ textarea {
 
 /*Timeline*/
 .timeline__container {
-  margin: 0;
+  margin: 20px 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);

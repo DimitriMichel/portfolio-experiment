@@ -28,7 +28,7 @@ const Projects = () => {
   //Play Animation Once In Viewport
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: -100,
+    threshold: 0,
   });
   return (
     <LazyLoad height={350}>
