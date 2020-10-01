@@ -37,16 +37,16 @@ const Experience = () => {
               <div className="timeline__item --clearfix">
                 <div className="timeline__icon"></div>
                 <div className="timeline__content --right">
-                  <span className="--date">Aug 2019-2020</span>
+                  <span className="--date">Aug 2019-Current</span>
 
-                  <div className="role">Scenester @ Wayfarers </div>
+                  <div className="role">Analyst/Content Manager @ JOC Investments  </div>
                 </div>
               </div>
               <div className="timeline__item --clearfix --item-two">
                 <div className="timeline__icon"></div>
                 <div className="timeline__content --left">
-                  <span className="--date">Jan 2020-Current</span>
-                  <div className="role">Web Dev @ Sustainable Selfies </div>
+                  <span className="--date">Oct 2019-Feb 2020</span>
+                  <div className="role">Contract Web Dev @ JOC Investments </div>
                 </div>
               </div>
             </div>

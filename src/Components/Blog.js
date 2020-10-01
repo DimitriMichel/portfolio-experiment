@@ -29,12 +29,12 @@ const Blog = () => {
     <div className="box--blue box__projects">
       <div
         className="box__content__container
-      yellow--pattern "
+      black--pattern "
       >
         <div className="projects__content ">
           <div className="box__header">
             <motion.div ref={ref} className="box--title">
-              Projects
+              Blog
             </motion.div>
             {inView ? (
               <motion.div
@@ -45,7 +45,7 @@ const Blog = () => {
                 className="box--title box__emoji"
               >
                 <span role="img" aria-label="Construction Worker Emoji">
-                  ✍️♂️
+                  ✍️
                 </span>
               </motion.div>
             ) : (
@@ -57,8 +57,20 @@ const Blog = () => {
               <BlogPost
                 imageSource={brainPNG}
                 alt="sculpture of human head"
-                blogLink="www.google.com"
-                blogTitle='How I Stopped Worrying'
+                blogLink="https://blog-dov9hkpfk.vercel.app/whatishappening"
+                blogTitle="How I Stopped Worrying And Learned To Love The Atom"
+              />
+              <BlogPost
+                imageSource={moneyPNG}
+                alt="money"
+                blogLink="https://blog-dov9hkpfk.vercel.app/transformation"
+                blogTitle="Cost: Demystified"
+              />
+              <BlogPost
+                imageSource={booksPNG}
+                alt="stack of books on a table"
+                blogLink="https://blog-dov9hkpfk.vercel.app/needtoknow"
+                blogTitle="React 101: Required Materials"
               />
             </motion.div>
           ) : (
@@ -70,4 +82,4 @@ const Blog = () => {
   );
 };
 
-export default Projects;
+export default Blog;
