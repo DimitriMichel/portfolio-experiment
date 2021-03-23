@@ -78,7 +78,7 @@ const ContactForm = () => {
       <div className="form__container">
         <form onSubmit={handleOnSubmit} className="form">
           <div className="contact__header">
-            <motion.div className="box--title--contact">Contact</motion.div>
+            <motion.h3 className="box--title--contact">Contact</motion.h3>
             <motion.div
               initial="static"
               animate="floating"

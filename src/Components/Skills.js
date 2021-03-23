@@ -27,7 +27,7 @@ const Skills = () => {
     <div className="box blue">
       <div className="box--content blue--pattern skills">
         <div className="box__header">
-          <motion.div className="box--title">Skills </motion.div>
+          <motion.h2 className="box--title">Skills </motion.h2>
           <motion.div
             variants={yFloatingAnimation}
             initial="static"

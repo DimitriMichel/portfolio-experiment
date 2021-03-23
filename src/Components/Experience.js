@@ -20,9 +20,9 @@ const Experience = () => {
       <div className="box__content__container">
         <div className="box--content green--pattern">
           <div className="box__header ">
-            <motion.div className="box--title --experience">
-              Experience{" "}
-            </motion.div>
+            <motion.h2 className="box--title --experience">
+              Experience
+            </motion.h2>
             <motion.div
               variants={rotatingAnimation}
               initial="static"

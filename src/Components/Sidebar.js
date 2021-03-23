@@ -85,7 +85,7 @@ const Sidebar = () => {
               <motion.li variants={nameVariants}>Louis</motion.li>
             </motion.ul>
             <motion.div variants={nameVariants} className="info text--subtitle">
-              Software Developer{"  "}
+              <p>Software Developer</p>
               <motion.div
                 initial="hidden"
                 animate="show"
@@ -97,14 +97,13 @@ const Sidebar = () => {
                 </span>
               </motion.div>
               {"  "}
-              <div className="location">Boston, MA</div>
+              <p className="location">Boston, MA</p>
             </motion.div>
             <motion.p variants={nameVariants}>
               <span className="sidebar__links text--subtitle">
                 <a href="https://github.com/DimitriMichel">Github</a>
               </span>
               <span className="sidebar__links text--subtitle"><a href="mailto:dimitri.dev@icloud.com">e-Mail</a></span>
-              <span className="sidebar__links text--subtitle"></span>
             </motion.p>
           </motion.div>
           <motion.img

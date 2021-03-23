@@ -34,7 +34,7 @@ const Blog = () => {
         >
           <div className="projects__content ">
             <div className="box__header">
-              <motion.div className="box--title">Blog</motion.div>
+              <motion.h2 className="box--title">Blog</motion.h2>
 
               <motion.div
                 variants={opacityAnimation}
@@ -55,24 +55,37 @@ const Blog = () => {
             </div>
 
             <motion.div animate={{ opacity: 1 }} className="project__content">
-              <BlogPost
-                imageSource={brainPNG}
-                alt="sculpture of human head"
-                blogLink="https://blog-dov9hkpfk.vercel.app/whatishappening"
-                blogTitle="How I Stopped Worrying And Learned To Love The Atom"
-              />
-              <BlogPost
-                imageSource={moneyPNG}
-                alt="money"
-                blogLink="https://blog-dov9hkpfk.vercel.app/transformation"
-                blogTitle="Cost: Demystified"
-              />
-              <BlogPost
-                imageSource={booksPNG}
-                alt="stack of books on a table"
-                blogLink="https://blog-dov9hkpfk.vercel.app/needtoknow"
-                blogTitle="React 101: Required Materials"
-              />
+              <ul>
+                <li>
+                  <BlogPost
+                      imageSource={brainPNG}
+                      alt="sculpture of human head"
+                      blogLink="https://blog-dov9hkpfk.vercel.app/whatishappening"
+                      blogTitle="How I Stopped Worrying And Learned To Love The Atom"
+                  />
+              </li>
+                <li>
+                  <BlogPost
+                      imageSource={moneyPNG}
+                      alt="money"
+                      blogLink="https://blog-dov9hkpfk.vercel.app/transformation"
+                      blogTitle="Cost: Demystified"
+                  />
+                </li>
+                <li>
+                  <BlogPost
+                      imageSource={booksPNG}
+                      alt="stack of books on a table"
+                      blogLink="https://blog-dov9hkpfk.vercel.app/needtoknow"
+                      blogTitle="React 101: Required Materials"
+                  />
+
+                </li>
+
+              </ul>
+
+
+
             </motion.div>
           </div>
         </div>

@@ -39,7 +39,7 @@ const Projects = () => {
         >
           <div className="projects__content">
             <div className="box__header">
-              <motion.div className="box--title">Projects</motion.div>
+              <motion.h2 className="box--title">Projects</motion.h2>
 
               <motion.div
                 variants={opacityAnimation}
@@ -60,29 +60,37 @@ const Projects = () => {
             </div>
 
             <motion.div animate={{ opacity: 1 }} className="project__content">
-              <Project
-                imageSource={tideGif}
-                alt="social media site"
-                projectInfo={tideInfo}
-                launchFrom={"https://tide.dimitrimichel.com/login"}
-                github={"https://github.com/DimitriMichel/Tide"}
-              />
+              <ul>
+                <li>
 
-              <Project
-                imageSource={plutoGif}
-                alt="data visualization"
-                projectInfo={plutoInfo}
-                launchFrom={"https://pluto.dimitriMichel.com"}
-                github={"https://github.com/DimitriMichel/Pluto"}
-              />
+                  <Project
+                      imageSource={bakeryGif}
+                      alt="bakery static site"
+                      projectInfo={bakerInfo}
+                      launchFrom={"https://bakery.dimitriMichel.com"}
+                      github={"https://github.com/DimitriMichel/Bakery"}
+                  />
+                </li>
+                <li>
+                  <Project
+                      imageSource={tideGif}
+                      alt="social media site"
+                      projectInfo={tideInfo}
+                      launchFrom={"https://tide.dimitrimichel.com/login"}
+                      github={"https://github.com/DimitriMichel/Tide"}
+                  />
+                </li>
 
-              <Project
-                imageSource={bakeryGif}
-                alt="bakery static site"
-                projectInfo={bakerInfo}
-                launchFrom={"https://bakery.dimitriMichel.com"}
-                github={"https://github.com/DimitriMichel/Bakery"}
-              />
+                <li>
+                  <Project
+                      imageSource={plutoGif}
+                      alt="data visualization"
+                      projectInfo={plutoInfo}
+                      launchFrom={"https://pluto.dimitriMichel.com"}
+                      github={"https://github.com/DimitriMichel/Pluto"}
+                  />
+                </li>
+                </ul>
             </motion.div>
           </div>
         </div>
