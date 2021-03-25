@@ -58,11 +58,9 @@ const Projects = () => {
                 )}
               </motion.div>
             </div>
-
             <motion.div animate={{ opacity: 1 }} className="project__content">
               <ul>
                 <li>
-
                   <Project
                       imageSource={bakeryGif}
                       alt="bakery static site"

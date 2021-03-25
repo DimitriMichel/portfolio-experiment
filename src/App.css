@@ -353,7 +353,7 @@ h2{
   align-content: center;
 }
 .blog__image__container{
-  height: 80%;
+  height: 70%;
 }
 .blog__image {
   border-radius: 0.25rem;
@@ -384,13 +384,13 @@ h2{
   align-self: center;
   margin: 0;
   width: 100%;
-  height: 100%;
   justify-self: center;
 }
 .project__video {
   border-radius: 0.25rem;
 }
 .project__buttons {
+  margin-top: 20px;
   text-align: center;
   margin-bottom: 5px;
 }
