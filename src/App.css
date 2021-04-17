@@ -396,11 +396,11 @@ h2{
 }
 .project__button {
   margin-right: 8px;
-
   border: none;
   background-color: black;
   border-radius: 0.25rem;
   color: white;
+  cursor: pointer;
   text-align: center;
   max-width: 100px;
   min-width: 100px;

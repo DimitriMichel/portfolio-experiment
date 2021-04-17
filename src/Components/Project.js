@@ -13,13 +13,13 @@ const Project = ({ imageSource, projectInfo, alt, launchFrom, github }) => {
           alt={alt}
         />
 
-        <div className="project__info text--subtitle">{projectInfo}</div>
+        <div className="project__info text--subtitle"><p>{projectInfo}</p></div>
         <div className="project__buttons">
           <a href={launchFrom}>
-            <button className="project__button">Launch</button>
+            <button className="project__button">Launch Site</button>
           </a>
           <a href={github}>
-            <button className="project__button">Code</button>
+            <button className="project__button">Project Code</button>
           </a>
         </div>
       </div>
