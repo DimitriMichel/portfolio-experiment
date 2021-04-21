@@ -103,7 +103,7 @@ const Sidebar = () => {
               <span className="sidebar__links text--subtitle">
                 <a href="https://github.com/DimitriMichel">Github</a>
               </span>
-              <span className="sidebar__links text--subtitle"><a href="mailto:dimitri.dev@icloud.com">e-Mail</a></span>
+              <span className="sidebar__links text--subtitle"><a href="mailto:dimitri.michel@hey.com">e-Mail</a></span>
             </motion.p>
           </motion.div>
           <motion.img
