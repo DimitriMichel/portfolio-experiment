@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import eCommerceGif from '../images/ecommerce.gif'
 import tideGif from "../images/tide.gif";
 import LazyLoad from "react-lazyload";
 import plutoGif from "../images/pluto.gif";
@@ -20,6 +21,7 @@ const opacityAnimation = {
 };
 
 //Project Info Text
+const eCommerceInfo = 'Fully featured eCommerce site.'
 const tideInfo = "A small social media application.";
 const plutoInfo = "Finances of all members of congress";
 const bakerInfo = "A static site for a local bakery";
@@ -59,7 +61,18 @@ const Projects = () => {
               </motion.div>
             </div>
             <motion.div animate={{ opacity: 1 }} className="project__content">
+
               <ul>
+                <li>
+                  <Project
+                      imageSource={eCommerceGif}
+                      alt="bakery static site"
+                      projectInfo={eCommerceInfo}
+                      launchFrom={"https://commerce.dimitriMichel.com"}
+                      github={"https://github.com/DimitriMichel/commerce"}
+                  />
+
+                </li>
                 <li>
                   <Project
                       imageSource={bakeryGif}
