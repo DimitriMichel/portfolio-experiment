@@ -320,6 +320,8 @@ h2{
 }
 .role {
   margin-top: 20px;
+  font-size: 1rem;
+
 }
 .box__projects {
   min-width: 100% !important;
@@ -333,7 +335,7 @@ h2{
   z-index: 20;
   height: 270px;
   width: 300px;
-  margin: 10px;
+  margin: 10px 10px 30px 10px;
   padding: 10px;
   background-color: white;
   border-radius: 0.25rem;
@@ -344,8 +346,8 @@ h2{
   min-height: 260px;
   max-height: 260px;
   height: 260px;
-  margin: 20px;
-  padding: 20px;
+  margin: 10px 10px 28px 10px;
+  padding: 10px;
   background-color: white;
   border-radius: 0.25rem;
   display: flex;
@@ -597,6 +599,20 @@ max-width: initial;
   .--item-two {
     margin-top: 10px;
   }
+  .timeline__container {
+    top: 65%;
+  }
+  .role {
+    margin-top: 5px;
+  }
+  .--right{
+    line-height: 2rem;
+  }
+  .--left{
+    line-height: 2rem;
+  }
+  .--item-two{ margin-bottom: 20px
+  }
 }
 
 @media only screen and (max-width: 341px) {
@@ -625,6 +641,7 @@ max-width: initial;
   }
   .--date {
     padding: 5px;
+    font-size: 1rem;
   }
   .project {
     margin: 10px 0;
