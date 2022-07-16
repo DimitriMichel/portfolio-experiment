@@ -24,7 +24,7 @@ const yFloatingAnimation = {
 };
 const Skills = () => {
   return (
-    <div className="box blue">
+    <div className="box blue overflow-hidden">
       <div className="box--content blue--pattern skills">
         <div className="box__header">
           <motion.h2 className="box--title">Skills </motion.h2>
@@ -38,8 +38,8 @@ const Skills = () => {
             <span role="img" aria-label="Hammer Emoji"> 🔨</span>
           </motion.div>
         </div>
-        <div className="logos__container">
-          <div className="logos">
+        <div className="logos__container w-1/2">
+          <div className="logos w-1/2">
             <motion.img
               whileHover={{ scale: 1.2 }}
               data-tip="React"

@@ -19,8 +19,6 @@ const Main = () => {
         <Skills />
         <Experience />
       </div>
-      <Projects />
-      <Blog />
       <ContactForm />
     </div>
   );

@@ -103,8 +103,52 @@ const Sidebar = () => {
               <span className="sidebar__links text--subtitle">
                 <a href="https://github.com/DimitriMichel">Github</a>
               </span>
+
               <span className="sidebar__links text--subtitle"><a href="mailto:dimitri.michel@hey.com">e-Mail</a></span>
+                <span className="sidebar__links text--subtitle"><a href="https://www.linkedin.com/in/dimitrimichel/">linkedIn</a></span>
             </motion.p>
+
+            <motion.p variants={nameVariants}>
+              <motion.div className="sidebar__links--projects center">projects i've worked on
+                <span className="ml-3" role="img" aria-label="Rocket Ship Emoji">
+                 🚀
+                </span>
+
+              </motion.div>
+              <div>
+                <ul className="sidebar__links__list">
+                  <li>
+                   <span className="sidebar__links text--subtitle">
+                    <a href="https://apps.apple.com/us/app/navigating-life/id1436512420">
+                        navigating life
+                    </a>
+                   </span>
+                    🌔
+                  </li>
+                  <li>
+                   <span className="sidebar__links text--subtitle">
+                    <a href="https://newtonfreelibrary.net/">
+                        newton free library
+                    </a>
+                   </span>
+                  </li>
+                  <li>
+                   <span className="sidebar__links text--subtitle">
+                    <a href="https://junkjunkbaby.com/">
+                        junk junk baby
+                    </a>
+                   </span>
+                  </li>                  <li>
+                   <span className="sidebar__links text--subtitle">
+                    <a href="https://apps.apple.com/us/app/fullmer-construction/id1486397406">
+                        fullmer construction
+                    </a>
+                   </span>
+                  </li>
+                </ul>
+              </div>
+            </motion.p>
+
           </motion.div>
           <motion.img
             initial="static"
