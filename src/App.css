@@ -656,7 +656,11 @@ max-width: initial;
   .box {
     padding: 5px;
     overflow: auto;
-    height: 100vh;
+    height: fit-content;
+  }
+
+  .logos {
+    margin: 50px;
   }
 
   .box--title {
